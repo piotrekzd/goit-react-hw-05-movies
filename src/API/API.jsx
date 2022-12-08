@@ -9,12 +9,12 @@ export const Trending = async () => {
     return response.data;
 };
 
-export const Query = async query => {
+export const getQuery = async query => {
     const response = await axios.get(`search/movie?api_key=${API_KEY}&language=en-US&query=${query}&include_adult=false&page=1`);
     return response.data;
 };
 
-export const MovieID = async movieId => {
+export const getMovieID = async movieId => {
     const response = await axios.get(`movie/${movieId}?api_key=${API_KEY}&language=en-US`);
     return response.data;
 };
@@ -24,7 +24,7 @@ export const Cast = async movieId => {
     return response.data.cast;
 };
 
-export const Reviews = async movieId => {
+export const getReviews = async movieId => {
     const response = await axios.get(`movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`);
     return response.data;
 };
