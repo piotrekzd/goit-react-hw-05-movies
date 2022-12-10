@@ -4,7 +4,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useMovieDetails } from "hooks/useMovieDetails";
 import { BackLink } from "components/BackLink/BackLink";
 import { Container, Wrapper } from "./detailsPage.styled";
-import { StyledLink } from "./homePage.styled";
+import { StyledLink } from "../HomePage/homePage.styled";
 import { Loader } from "components/Loader/Loader";
 
 const DetailsPage = () => {
