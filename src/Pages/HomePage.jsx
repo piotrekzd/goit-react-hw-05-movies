@@ -2,7 +2,7 @@ import { Trending } from "API/API";
 import { useLocation } from "react-router-dom";
 import { Container, Wrapper, Image, StyledLink, Header } from "./homePage.styled";
 
-export const HomePage = () => {
+const HomePage = () => {
     const location = useLocation();
     const trendingMovies = Trending();
 
@@ -25,3 +25,5 @@ export const HomePage = () => {
         </main>
     );
 };
+
+export default HomePage;

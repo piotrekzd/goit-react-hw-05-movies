@@ -1,9 +1,9 @@
-import { SearchBox } from 'components/SearchBox/SearchBox';
-import Movies from 'components/Movies';
-import { useQuery } from 'utils/hooks/useQuery';
+import { Searchbox } from 'components/Searchbox/Searchbox';
+import { Movies } from 'components/Movies';
+import { useQuery } from 'hooks/useQuery';
 import { useSearchParams } from 'react-router-dom';
 
-export const MoviesPage = () => {
+const MoviesPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('query') ?? '';
     const movies = useQuery(query);
@@ -19,8 +19,10 @@ export const MoviesPage = () => {
 
     return (
         <div>
-            <SearchBox value={query} onChange={updateQuery} />
+            <Searchbox value={query} onChange={updateQuery} />
             <Movies movies={moviesList} />
         </div>
     );
 };
+
+export default MoviesPage;

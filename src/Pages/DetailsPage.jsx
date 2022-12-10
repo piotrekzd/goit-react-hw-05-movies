@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { useDetails } from "utils/hooks/useDetails";
+import { useMovieDetails } from "hooks/useMovieDetails";
 import { BackLink } from "components/BackLink";
-import { Container, Wrapper } from "./details.styled";
-import { StyledLink } from "./home.styled";
+import { Container, Wrapper } from "./detailsPage.styled";
+import { StyledLink } from "./homePage.styled";
 import Loader from "components/Loader/Loader";
 
-export const DetailsPage = () => {
+const DetailsPage = () => {
     const { movieId } = useParams();
-    const { movie } = useDetails(movieId);
+    const { movie } = useMovieDetails(movieId);
     const location = useLocation();
 
     const backLinkHref = location.state?.from ?? '/movies';
@@ -49,3 +49,5 @@ export const DetailsPage = () => {
         </div>
     );
 };
+
+export default DetailsPage;

@@ -25,6 +25,6 @@ export const Cast = async movieId => {
 };
 
 export const getReviews = async movieId => {
-    const response = await axios.get(`movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`);
+    const response = await axios.get(`movie/${movieId}/credits?api_key=${API_KEY}&language=en-US&page=1`);
     return response.data;
 };
