@@ -12,7 +12,7 @@ const HomePage = () => {
                 <h1>Check out the trending movies!</h1>
             </Header>
             <Container>
-                {trendingMovies.map(movie => (
+                {trendingMovies.map(movie => 
                     <Wrapper key={movie.id}>
                         <StyledLink to={`movies/${movie.id}`} state={{ from: location }}>
                             <p>{movie.title}</p>
@@ -20,7 +20,7 @@ const HomePage = () => {
                             ></Image>
                         </StyledLink>
                     </Wrapper>
-                ))}
+                )}
             </Container>
         </main>
     );
