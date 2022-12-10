@@ -5,11 +5,10 @@ export const useReviews = movieId => {
     const [reviews, setReviews] = useState(null);
 
     useEffect(() => {
-        if (movieId) {
+        if (movieId) 
             getReviews(movieId).then(response => {
                 setReviews([...response.results]);
             });
-        };
     }, [movieId]);
 
     return { reviews };

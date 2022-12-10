@@ -9,7 +9,7 @@ const Cast = () => {
     const { actors } = useCast(movieId);
 
     if (!actors) return <Loader />;
-
+        // console.log(movieId);
     return (
         <Container>
         {actors.map(actor => {
