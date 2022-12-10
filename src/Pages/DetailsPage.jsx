@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useMovieDetails } from "hooks/useMovieDetails";
-import { BackLink } from "components/BackLink";
+import { BackLink } from "components/BackLink/BackLink";
 import { Container, Wrapper } from "./detailsPage.styled";
 import { StyledLink } from "./homePage.styled";
 import { Loader } from "components/Loader/Loader";

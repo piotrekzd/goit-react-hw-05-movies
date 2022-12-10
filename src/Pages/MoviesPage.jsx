@@ -1,5 +1,5 @@
 import { Searchbox } from 'components/Searchbox/Searchbox';
-import { Movies } from 'components/Movies';
+import { Movies } from 'components/Movies/Movies';
 import { useQuery } from 'hooks/useQuery';
 import { useSearchParams } from 'react-router-dom';
 
