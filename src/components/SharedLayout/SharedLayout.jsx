@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Container, Logo, Link, Header } from './sharedLayout.styled';
-import Loader from 'components/Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 
 
 export const SharedLayout = () => {
@@ -9,9 +9,6 @@ export const SharedLayout = () => {
         <Container>
         <Header>
             <Logo>
-            <span role="img" aria-label="clip movie">
-                🎬
-            </span>{' '}
             Movie Search 
             </Logo>
             <nav>

@@ -6,7 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 const MoviesPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('query') ?? '';
-    const movies = useQuery(query);
+    const { movies } = useQuery(query);
 
     const updateQuery = query => {
         const nextParams = query !== '' ? { query } : {};

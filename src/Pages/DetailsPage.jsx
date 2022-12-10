@@ -5,7 +5,7 @@ import { useMovieDetails } from "hooks/useMovieDetails";
 import { BackLink } from "components/BackLink";
 import { Container, Wrapper } from "./detailsPage.styled";
 import { StyledLink } from "./homePage.styled";
-import Loader from "components/Loader/Loader";
+import { Loader } from "components/Loader/Loader";
 
 const DetailsPage = () => {
     const { movieId } = useParams();

@@ -1,10 +1,10 @@
 import { useCast } from 'hooks/useCast';
 import { useParams } from 'react-router-dom';
 import { Container, Span } from './cast.styled';
-import Loader from 'components/Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 import PropTypes from 'prop-types';
 
-export const Cast = () => {
+const Cast = () => {
     const { movieId } = useParams();
     const { actors } = useCast(movieId);
 
@@ -39,3 +39,5 @@ export const Cast = () => {
 Cast.propTypes = {
 movieId: PropTypes.string.isRequired,
 };
+
+export default Cast;

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import Loader from './Loader/Loader';
+import { Loader } from './Loader/Loader';
 
 
 export const Movies = ({ movies }) => {

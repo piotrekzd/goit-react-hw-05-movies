@@ -1,7 +1,7 @@
 import { Grid } from 'react-loader-spinner';
 import { Overlay } from './loader.styled';
 
-const Loader = () => {
+export const Loader = () => {
     return (
         <Overlay >
         <Grid
@@ -16,5 +16,3 @@ const Loader = () => {
         </Overlay>
     );
 };
-
-export default Loader;
